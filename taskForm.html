@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/20de5e8cf7.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        main{
+            background-image:url(/images/pexels-max-vakhtbovych-5997968.jpg);
+            height: 100vh;
+            background-size: initial;
+            /* overflow: auto;             */
+        }
+        h1{
+            height:12%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 40px;
+            font-weight: 100;
+            text-transform: uppercase;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 8px;
+            text-shadow: 2px 2px rgb(235, 134, 90);
+        }
+        h2{
+            color: rgb(0, 0, 0);
+            width: 100%;
+            font-size: 15px;
+            font-weight: 200;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            /* border-bottom: 1px solid white; */
+        }
+        h2::after{
+            content: "";
+            position: absolute;
+            top: 60px;
+            left:12px;
+            width: 95%;
+            height: 2px;
+            background-color: #fff;
+        }
+        .formElements{
+            width: 35%;
+            height: 84%;
+            background-color: rgba(242, 69, 11, 0.459);
+            margin: auto;
+           
+        }
+        .input_wrap{
+            width:80%;
+            margin: 10px auto;
+            /* border: 1px solid #000; */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .input_wrap input{
+            padding: 11px;
+            font-size: 15px;
+            width:100%;
+            border:none;
+        }
+        
+        .input_wrap label{
+            color: #fff;
+        }
+        
+        .input_wrap input:focus {
+            outline: none;
+        }
+        .action_wrap{
+            
+            padding: 5px;
+            text-align: center; 
+        }
+        .action_wrap button,input{
+            font-size:15px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <main>
+        <h1>Classic enquiry form</h1>
+        <div class="formElements">
+            <h2> Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, id exercitationem suscipit doloremque autem voluptates.</h1>
+            <form autocomplete="off" action="/">
+                <div class="input_wrap">
+                  <label for="Name"><i class="fa-solid fa-user" style="font-size:20px; color:#fff;padding: 10px;background-color: #000;"></i></label>
+                  <input type="text" name="Name" id="Name" placeholder="Name" autocomplete="off" required>
+                  
+                </div>
+                <div class="input_wrap">
+                    <label for="Password"><i class="fa-solid fa-key" style="font-size:20px; color:#fff;padding: 10px;background-color: #000;"></i></label>
+                    <input type="password" name="password" id="password" placeholder="password" required minlength="10">
+                </div>
+                <div class="input_wrap">
+                    <label for="Email"><i class="fa-solid fa-envelope" style="font-size:20px; color:#fff;padding: 10px;background-color: #000;"></i></label>
+                    <input type="email" name="Email" id="Email" placeholder="Email" autocomplete="off" readonly>
+                </div>
+                <!-- <div class="input_wrap">
+                    <label for="Search">Search</label>
+                    <input type="search" name="Search" id="Search" placeholder="Search" autocomplete="off">
+                </div>
+                <div class="input_wrap">
+                    <label for="Number">Number</label>
+                    <input type="number" name="number" id="number" placeholder="Number" autocomplete="off" maxlength="10">
+                </div>
+                <div class="input_wrap">
+                    <label for="color">Color</label>
+                    <input type="color" name="color" id="color">
+                </div>
+                <div class="input_wrap">
+                    <label for="range">Range</label>
+                    <input type="range" name="range" id="range"> 
+                </div> -->
+                <div class="input_wrap">
+                    <label for="date"style="font-size:15px;color: #fff;padding: 12px;background-color: #000;">Date</label>
+                    <input type="date" name="date" id="date">
+                </div>
+                <div class="input_wrap">
+                    <label for="gender"style="font-size:15px;color: #fff;padding: 12px;background-color: #000;">Gender</label>
+                    <label for="male" style="text-align: center;">Male</label>
+                    <input type="radio" name="gender" id="Male">
+                    <label for="Female"style="text-align:center;" >Female</label>
+                    <input type="radio" name="gender" id="Female">
+                </div>
+                <div class="input_wrap">
+                    <label for="file" style="font-size:15px;color: #fff;padding: 12px;background-color: #000;width: 60%;">Please choose</label>
+                    <input type="file" name="file" id="file">
+                </div>
+                <div class="input_wrap">
+                    <label for="single">single</label>
+                    <input type="checkbox" name="single" id="single">
+                    <label for="double">double</label>
+                    <input type="checkbox" name="double" id="double">
+                    <label for="suite">suite</label>
+                    <input type="checkbox" name="suite" id="suite">
+                    <label for="executive">executive</label>
+                    <input type="checkbox" name="executive" id="executive">
+                </div>
+                <div class="input_wrap">
+                    <i class="fa-solid fa-caret-down" style="font-size:15px;color: #fff;padding: 12px;background-color: #000;"></i>
+                    <select name="city" id="city" style="width: 100%;padding: 10px;">
+                        <option value="none">--Please choose--</option>
+                        <option value="hyd">Hyd</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Mumbai">Mumbai</option>
+                    </select>
+                </div>
+                <!-- <div class="input_wrap">
+                    <label for="feedback" style="font-size:15px;color: #fff;padding: 5px;background-color: #000;"> Provide Feedback</label>
+                    <textarea name="feedback" id="feedback" cols="30" rows="5">
+                    </textarea>
+                </div> -->
+                  
+                <div class="action_wrap">
+                        <button type="submit">Submit</button>
+                        <input type="reset" value="Reset" >
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
